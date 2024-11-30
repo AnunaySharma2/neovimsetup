@@ -23,6 +23,13 @@ return {
       lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
+      lspconfig.glsl_ls.setup({
+        capabilities = capabilities,
+        filetypes = { "glsl", "vert", "frag" }, -- Explicitly set supported filetypes
+        root_dir = function(fname)
+          return lspconfig.util.find_git_ancestor(fname) or vim.loop.cwd()
+        end,
+      })
       lspconfig.solargraph.setup({
         capabilities = capabilities
       })
