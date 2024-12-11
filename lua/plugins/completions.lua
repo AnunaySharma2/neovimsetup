@@ -9,9 +9,9 @@ return {
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
   },
-  {
-    "github/copilot.vim",
-  },
+  -- {
+  --   "github/copilot.vim",
+  -- },
   {
     "L3MON4D3/LuaSnip",
     dependencies = {
